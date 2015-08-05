@@ -1,0 +1,42 @@
+\documentclass[UTF8]{ctexart}
+
+\usepackage{color,listings}
+\usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=red,bookmarksnumbered]{hyperref}
+
+
+
+
+
+
+\title{Posh-git 安装}
+\author{Qinka}
+\date{2015-8-4}
+
+\lstset{breaklines}
+\lstset{backgroundcolor=\color[rgb]{0.84,1.00,0.92}{}}
+
+\begin{document}
+\maketitle
+
+Powershell 下的 Git 是使用 Posh-git，安装并正确配置之后，可以有如下效果
+
+\begin{lstlisting}[language=bash]
+    B:\Post\Posts [master]>
+\end{lstlisting}
+
+\section*{配置方法}
+\begin{enumerate}
+  \item 首先安装 PsGet \footnote{如果已经安装，可跳过}
+  \begin{lstlisting}
+(new-object Net.WebClient).DownloadString("http://psget.net/GetPsGet.ps1") | iex
+  \end{lstlisting}
+  \item 安装 Posh-git
+  \begin{lstlisting}
+  Install-Module posh-git
+  \end{lstlisting}
+  \item 最后前往 \href{https://github.com/dahlbyk/posh-git}{GitHub/Posh-git} 将 profile.example.ps1 文件复制到 powershell.exe 所在的目录。
+\end{enumerate}
+
+finish
+
+\end{document}
